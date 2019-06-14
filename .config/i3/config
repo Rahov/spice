@@ -1,0 +1,265 @@
+## Rahov's i3 config file (v4)
+#
+# Table of Contents:
+#
+# 1) definitions
+# 2) i3bar
+# 3) keybinds
+# 4) workspace
+#
+## Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+
+
+###############################
+###     i3 Definitions      ###
+###############################
+
+## Window border size
+for_window [class="^.*"] border pixel 1
+
+## Floating windows 
+for_window [class="ksnip"] floating enable
+for_window [class="Transmission"] floating enable
+for_window [class="ckb-next"] floating enable
+
+## Window gaps
+gaps inner 7
+gaps outer 5
+
+## Default terminal
+set $term --no-startup-id $TERMINAL
+
+## Font
+font pango:DejaVu Sans 12
+
+## Disable Mouse Features
+focus_follows_mouse no
+mouse_warping none
+
+## Auto-start
+# Compton (transparency)
+exec --no-startup-id compton -f
+
+# Thunderbird 
+assign [class="Thunderbird"] $ws6
+exec --no-startup-id thunderbird
+
+# Transmission
+assign [class="Transmission"] $ws7
+exec --no-startup-id transmission-gtk
+
+# Firefox
+assign [class="Firefox"] $ws2
+exec --no-startup-id firefox
+
+# Spotify (does not work)
+# assign [class="spotify"] $ws3
+# assign [class="Spotify"] $ws3
+# assign [class="Spotify\ Free"] $ws3
+# exec spotify
+
+# Steam-runtime 
+assign [class="Steam"] $ws4
+exec --no-startup-id steam
+ 
+# ckb-next
+assign [class="ckb-next"] $ws7
+exec ckb-next
+
+# Wallpaper
+exec --no-startup-id feh --bg-scale /home/rahov/.wallpaper.png
+
+# Numlock
+exec --no-startup-id numlockx on
+
+## keyboard setup (british / bulgarian-phonetic)
+exec --no-startup-id setxkbmap -model pc104 -layout ,bg -variant ,phonetic, -option grp:alt_shift_toggle
+
+## Use Mouse+$mod to drag floating windows 
+floating_modifier $mod
+
+
+###############################
+###     i3bar setup         ###
+###############################
+
+bar {
+    position top
+    tray_output primary
+    i3bar_command i3bar -t    
+    status_command i3status --config ~/.config/i3status/config
+    mode dock
+    modifier None    
+    binding_mode_indicator yes
+    font pango:DejaVu Sans 12
+
+    colors{
+          background #20202080
+          statusline #ffffff
+	  separator  #f0f0f0
+ 
+	  #class             boarder backgr  text
+          focused_workspace  #545454 #3c3c3c #ffffff
+          inactive_workspace #545454 #202020 #ffffff
+          active_workspace   #545454 #202020 #ffffff
+          urgent_workspace   #545454 #202020 #ffffff
+    }
+}
+
+
+###########################
+###     Keybinds        ###
+###########################
+
+# Audio controls
+bindsym XF86AudioRaiseVolume "exec amixer -q sset Master 3%+"
+bindsym XF86AudioLowerVolume "exec amixer -q sset Master 3%-"
+bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+bindsym XF86AudioPlay exec "playerctl play-pause"
+bindsym XF86AudioStop exec "playerctl stop"
+
+## windows keybind
+set $mod Mod4
+
+## redshift toggle
+bindsym $mod+i exec redshift -P -O 3500 
+bindsym $mod+Shift+i exec redshift -P -O 6500
+
+## Snipping tool
+bindsym $mod+Shift+s exec ksnip
+
+## resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Right resize shrink width 2 px or 2 ppt
+        bindsym Up resize grow height 2 px or 2 ppt
+        bindsym Down resize shrink height 2 px or 2 ppt
+        bindsym Left resize grow width 2 px or 2 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+## start a terminal
+bindsym $mod+Return exec alacritty 
+
+## kill focused window
+bindsym $mod+q kill
+
+## split in horizontal or vertical orientation (toggle)
+bindsym $mod+v split toggle
+
+## start dmenu (a program launcher)
+bindsym $mod+d exec rofi -show drun
+
+## change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# enter fullscreen mode for the focused container
+#bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+e layout toggle tabbed split 
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+bindsym $mod+w layout toggle split
+
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+
+###########################
+###     Workspace       ###
+###########################
+
+# Define names 
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 ""
+set $ws9 ""
+set $ws10 ""
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10

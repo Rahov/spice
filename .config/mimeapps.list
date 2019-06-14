@@ -1,0 +1,36 @@
+[Added Associations]
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-0QQM2Z.desktop;
+message/rfc822=userapp-Thunderbird-0QQM2Z.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/plain=vim.desktop;libreoffice-writer.desktop;wine-extension-txt.desktop;
+application/x-ms-dos-executable=wine.desktop;
+text/csv=libreoffice-calc.desktop;
+application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
+
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-0QQM2Z.desktop
+message/rfc822=userapp-Thunderbird-0QQM2Z.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop

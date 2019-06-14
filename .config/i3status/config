@@ -1,0 +1,58 @@
+### General settings
+general {
+  output_format = "i3bar"
+  colors = true
+  interval = 5
+}
+
+
+### Order of displayed widgets
+order += "cpu_usage"
+order += "cpu_temperature 0"
+#order += "wireless wlan0"
+#order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+
+### CPU usage in %
+cpu_usage {
+  format = "  %usage "
+}
+
+
+### CPU temperature in °C
+cpu_temperature 0 {
+  format = "  %degrees °C "
+}
+
+
+### WLAN status
+#wireless wlan0 {
+#    format_up = " W (%quality at %essid, %bitrate) %ip "
+#    format_down = ": down"
+#}
+
+
+### Remaining battery in %
+#battery 0 {
+#  format = " Battery %percentage "
+#    path = "/sys/class/power_supply/BAT0/uevent"
+#    low_threshold = 10
+#}
+
+
+### Volume in %
+volume master {
+  format = "  %volume "
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
+}
+
+
+### Time (weekday month day year - hh:mm am/pm)
+tztime local {
+  #format = " %a %b %_d %Y - %l:%M%p "
+  format = " %_d %b %Y - %H:%M   "
+}
