@@ -13,46 +13,136 @@ If there is any misunderstanding or mistakes within the guide, please do let me 
 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "placeholder")
 
-## Core Install 
+## Pre-installation  
 
-1. Pre-requesets 
+1. Pre-requisites 
 
 For UEFI motherboards, verify UEFI mode:
 ```bash
-efivar -l
+$ efivar -l
 ```
 
 Connecting to the network (if not wired):
 ```bash
-wifi-menu
+$ wifi-menu
 ```
 
 Review the partition names that will be used: 
 ```bash
-lsblk
+$ lsblk
 #or
-fdisk -l
+$ fdisk -l
 ```
 
 2. Partitioning
 
-The easiest way I've found for partitioning the disk is:
 ```bash
-cfdisk /dev/nvme0n1pX 	#for nvme drives 
+$ cfdisk /dev/nvme0n1pX 	#for nvme drives 
 #or
-cfdisk /dev/xdaX 	#for ssd drives 
+$ cfdisk /dev/xdaX	#for ssd drives 
 ```
 *Note:* _X denotes a number which you should have figured out from the previous command._
 
-3. Filesystems
+3. File systems
 
-Please do keep in mind this is for a EFI system:
 ```bash
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mount /dev/sda2 /mnt
-mkdir /mnt/boot
-mount /dev/sda1 /mnt/boot
+$ mkfs.fat -F32 /dev/sda1
+$ mkfs.ext4 /dev/sda2
+$ mount /dev/sda2 /mnt
+$ mkdir /mnt/boot
+$ mount /dev/sda1 /mnt/boot
 ```
 
-*Note:* _I'm assuming sda1 is the EFI system partition and sda2 is the root partition. Addtioanlly, swap is not included._ 
+*Note: I'm assuming sda1 is the EFI system partition and sda2 is the root partition. Addtioanlly, swap is not included.*
+
+## Installation
+
+1. Installing the system 
+
+```bash
+$ pacstrap /mnt base base-devel linux-headers linux-lts linux-lts-headers zsh git dialog wpa_supplicant iw vim 
+```
+
+*Note: Only base is needed for the system, however, base-devel is strongly recommended. Other applciations within the wrapper are optional and can be removed.*
+
+2. Generating an fstab file
+
+```bash
+$ genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+3. Entering into the system 
+
+```bash
+$ arch-chroot /mnt /bin/bash
+```
+
+4. Installing a bootloader
+
+```bash
+$ bootctl install
+```
+
+*Note: grub is a nice alternative to the bootctl installer, however, if you are using MBR, grub is requred.*
+
+5. Creating a boot entry
+
+```bash
+$ vim /boot/loader/entries/arch.conf
+
+title 	Arch Linux
+linux 	/vmlinuz-linux
+initrd  /intel-ucode.img
+initrd	/initramfs-linux.img
+options root=/dev/'sda2' rw
+```
+
+*Note: linux-lts can be used as a boot entry instead* 
+
+6. Setting the default entry
+
+```bash
+$ vim /boot/loader/loader.conf
+
+timeout 3
+default arch
+```
+
+7. Reboot and test
+
+This phase is completely optional, however, it recommended to test wether any mistakes have been made and if the system will boot.
+
+```bash
+$ exit
+$ umount /dev/sda1
+$ umount /dev/sda2
+$ reboot
+```
+
+## Post-installation
+
+1. Setup a root password
+```bash 
+$ passwd
+```
+
+2. Setup a hostname
+```bash 
+$ host_name > /etc/hostname
+```
+
+4. Setup a user
+```bash 
+$ useradd -m -G wheel user_name
+$ passwd user_name
+```
+
+5. Sudo privilage 
+```bash 
+vim /etc/sudoers
+
+# uncomment to allow members of group...
+%wheel ALL=(ALL) ALL
+```
+
+
