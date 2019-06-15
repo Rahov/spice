@@ -1,67 +1,67 @@
-#Tag,Name,Description
-N,i3-gaps, the window manager
+Tag,Name,Description
+N,alacritty, My current terminal emulator of choice
+O,alacritty-terminfo, Optional dependency
+N,arc-gtk-theme, simple but effective
+N,atool, a bundle of rarely used tools
 N,audacious, rarely used - but it does the job
+O,awesome-terminal-fonts,I don’t even know 
+A,capitaine-cursors, it looks nice
+A,cherrytree, notepad++ in wiki form
+A,ckb-next, RGB keyboard control
 N,compton, the more expensive compositor
 N,dash, the faster bash
+A,davinci-resolve, I don't know how to use it yet
+A,discord, skype's younger and better brother
 N,feh, useful for looking at my meme archive 
+O,ffmpegthumbnailer, dependency of thunar
 N,firefox, no comment
 O,gnome-disk-utility, makes things easier
+A,godot, awesome open-source game engine
+A,google-chrome, spyware
 N,highlight, I don't know how it works
 N,hunspell-en_GB, spellchecking dictionary
+N,i3-gaps, the window manager
+A,ksnip-git, the classic snipping tool
 N,libreoffice-fresh, will be removed for tex
 N,libreoffice-fresh-en-gb, same
+N,lightdm, the display manager
+N,lightdm-gtk-greeter, used for waving hands
+N,lightdm-webkit-theme-litarvan, great theme
+O,lua, needed language support 
 N,neofetch, cool tool
 N,networkmanager, does what the name says 
+N,noto-fonts, no comment 
+O,noto-fonts-cjk, no comment
+N,ntfs-3g, helps me see things
 N,numlockx, prevents me from breaking my arm 
+N,papirus-icon-theme, the icon theme 
+O,perl, optionail vim dependency
+N,playerctl, useful music player protocol
 N,pulseaudio, makes audio work
 N,pulseaudio-alsa, connects audio to alsa
 N,pulsemixer, controls audio
-N,playerctl, useful music player protocol
 N,qt5ct, used for themeing issues
 N,redshift-gtk-git, eye sight is important
 N,reflector, useful tool for updating the mirrorlist
 N,rofi, dmenu but better looking
-N,steam, you think you funny
-N,atool, a bundle of rarely used tools
-N,vim, the Linux version of the Swiss knife 
 O,ruby, optional vim dependency
-O,lua, needed language support 
+A,spotify, useful for finding some songs
+N,steam, you think you funny
+A,steam-fonts, makes steam look better
 O,tcl, optional vim dependency
-O,perl, optionail vim dependency
-N,alacritty, My current terminal emulator of choice
-O,alacritty-terminfo, Optional dependency
-N,lightdm, the display manager
-N,lightdm-gtk-greeter, used for waving hands
-N,lightdm-webkit-theme-litarvan, great theme
+N,thunar, some habits die hard
+N,thunderbird, mutt is probably a better choice 
+N,transmission-gtk, I don't like the cli version
+O,ttf-carlito, optional
+N,ttf-fira-code, the terminal font
+O,tumbler, Dependency of thunar 
+N,vim, the Linux version of the Swiss knife 
+A,visual-studio-code-bin, vim but easy to use 
+N,vlc, no comment
+N,wget, powerful web utility
+N,xbindkeys, useful for non-English natives
+O,xdg-user-dirs, the traditional directories
+O,xorg-xprop, a useful tool for class names 
 N,zathura, still getting used to it
 N,zathura-pdf-mupdf, used for reading pdf
 N,zsh, is nice - I like it
-N,ntfs-3g, helps me see things
-N,wget, powerful web utility
-N,xbindkeys, useful for non-English natives
-N,thunar, some habits die hard
-O,ffmpegthumbnailer, dependency of thunar
-O,tumbler, Dependency of thunar 
-N,thunderbird, mutt is probably a better choice 
-N,transmission-gtk, I don't like the cli version
-N,arc-gtk-theme, simple but effective
-N,papirus-icon-theme, the icon theme 
-N,noto-fonts, no comment 
-O,noto-fonts-cjk, no comment
-N,ttf-fira-code, the terminal font
-O,ttf-carlito, optional
-N,vlc, no comment
-O,awesome-terminal-fonts,
-O,xdg-user-dirs, the traditional directories
-O,xorg-xprop, a useful tool for class names 
-A,discord, skype's younger and better brother
-A,capitaine-cursors, it looks nice
-A,cherrytree, notepad++ in wiki form
-A,ckb-next, RGB keyboard control
-A,visual-studio-code-bin, vim but easy to use 
-A,spotify, useful for finding some songs
-A,steam-fonts, makes steam look better
-A,google-chrome, spyware
-A,ksnip-git, the classic snipping tool
-A,godot, awesome open-source game engine
-A,davinci-resolve, I don't know how to use it yet
