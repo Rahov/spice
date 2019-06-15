@@ -108,7 +108,13 @@ timeout 3
 default arch
 ```
 
-7. Reboot and test
+7. Enabling Network Manager
+
+```bash
+systemctl enable NetworkManger
+```
+
+8. Reboot and test
 
 This phase is completely optional, however, it recommended to test wether any mistakes have been made and if the system will boot.
 
@@ -164,6 +170,7 @@ $ hwclock --systohc --utc
 8. Adding modules (specific for your system)
 ```bash 
 vim /etc/mkinitcpio.conf
+
 # Adding moduless
 MODULES=(ext4 crc32c-intel nvidia nvidia_drm)
 
@@ -176,7 +183,7 @@ $ hwdetect --show-modules
 $ mkinitcpio -M
 Alternatively, refert to the Arch Linux Wiki for additional information.*
 
-Regenerating a lts image:
+Regenerating an lts image:
 ```bash
 $ mkinitcpio -p linux-lts
 ```
@@ -186,5 +193,56 @@ $ mkinitcpio -p linux-lts
 ```bash
 $ reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
+
+10. Configuring pacman
+
+```bash
+$ vim /etc/pacman.conf
+
+# multilib (32bit packages)
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+# misc
+Color
+CheckSpace
+VerbosePkgLists
+```
+
+11. Video graphics
+
+OpenGL:
+```bash
+$ pacman -S mesa mesa-libgl lib32-mesa-libgl 
+```
+
+Xorg:
+```bash
+$ pacman -S xorg-server xorg-xinit xorg-server-utils
+```
+
+Intel:
+```bash
+$ pacman -S xf86-video-intel lib32-mesa-libgl 
+```
+
+Nvidia:
+```bash
+$ pacman -S nvidia lib32-nvidia-libgl nvidia-settings nvidia-utils lib32-nvidia-libgl
+```
+
+12. Desktop environment
+
+```bash
+$ pacman -S i3 lightdm lightdm-gtk-greeter
+```
+
+13. Enable lightdm
+
+```bash
+$ systemctl enable lightdm 
+```
+
+## Extras
 
 
