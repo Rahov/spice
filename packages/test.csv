@@ -1,0 +1,89 @@
+#Tag,Name,Discription
+N,alsa-plugins,
+N,alsa-utils,
+N,audacious,
+N,awesome-terminal-fonts,
+N,compton,
+N,dash,
+N,dmenu,
+N,feh,
+N,ffmpegthumbnailer,
+N,firefox,
+O,gnome-disk-utility,
+A,google-chrome,
+N,highlight,
+N,hunspell-en_GB,
+N,i3-gaps,
+N,i3blocks,
+N,i3lock,
+N,i3status,
+N,intel-ucode,
+A,ksnip-git,
+N,lib32-nvidia-utils,
+N,libreoffice-fresh,
+N,libreoffice-fresh-en-gb,
+N,linux-firmware,
+N,linux-headers,
+N,linux-lts-headers,
+N,mesa,
+N,neofetch,
+N,networkmanager,
+O,noto-fonts-cjk,
+N,numlockx,
+N,papirus-icon-theme,
+N,playerctl,
+N,pulseaudio,
+N,pulseaudio-equalizer,
+N,qt5ct,
+N,redshift-gtk-git,
+N,reflector,
+N,rofi,
+O,ruby,
+A,spotify,
+N,steam,
+A,steam-fonts,
+O,tcl,
+O,tumbler,
+O,xdg-user-dirs,
+?,xf86-video-intel,
+N,xorg-server,
+,,
+,,
+,NATIVE,
+,,
+N,atool, a bundle of rarerly used tools
+N,vim, the linux version of the swiss knife 
+N,alacritty, My current terminal emulator of choice
+O,alacritty-terminfo, Optional dependecy
+N,lightdm, the display manager
+N,lightdm-gtk-greeter, used for waving hands
+N,lightdm-webkit-theme-litarvan, great theme
+N,zathura, still getting used to it
+N,zathura-pdf-mupdf, used for reading pdfs
+N,zsh, is nice, I like it
+N,ntfs-3g, helps me see things
+N,arc-gtk-theme, simple, but effective
+N,wget, powerful web utility
+N,xbindkeys, useful for non-english natives
+N,thunar, some habbits die hard
+N,thunderbird, mutt is probably a better choice 
+N,transmission-gtk, I don't like the cli version
+N,ttf-fira-code, the terminal font
+,OPTIONAL,
+,,
+O,xorg-xprop, a useful tool for class namess 
+O,yay,
+O,vlc,
+O,ttf-carlito,
+?,xorg-fonts-alias,
+?,xorg-fonts-misc,
+,,
+,,
+,,
+,AUR,
+,,
+A,discord, skype's younger and better brother
+A,capitaine-cursors, it looks nice
+A,cherrytree, notepad++ in wiki form
+A,ckb-next, rgb keyboard controll
+A,visual-studio-code-bin, vim but easy to use 
