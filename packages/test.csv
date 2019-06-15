@@ -1,4 +1,4 @@
-#Tag,Name,Discription
+#Tag,Name,Description
 N,i3-gaps, the window manager
 N,audacious, rarely used - but it does the job
 N,compton, the more expensive compositor
@@ -22,26 +22,26 @@ N,redshift-gtk-git, eye sight is important
 N,reflector, useful tool for updating the mirrorlist
 N,rofi, dmenu but better looking
 N,steam, you think you funny
-N,atool, a bundle of rarerly used tools
-N,vim, the linux version of the swiss knife 
-O,ruby, optional vim dependecy
+N,atool, a bundle of rarely used tools
+N,vim, the Linux version of the Swiss knife 
+O,ruby, optional vim dependency
 O,lua, needed language support 
-O,tcl, optional vim dependecy
-O,perl, optionail vim dependecy
+O,tcl, optional vim dependency
+O,perl, optionail vim dependency
 N,alacritty, My current terminal emulator of choice
-O,alacritty-terminfo, Optional dependecy
+O,alacritty-terminfo, Optional dependency
 N,lightdm, the display manager
 N,lightdm-gtk-greeter, used for waving hands
 N,lightdm-webkit-theme-litarvan, great theme
 N,zathura, still getting used to it
-N,zathura-pdf-mupdf, used for reading pdfs
+N,zathura-pdf-mupdf, used for reading pdf
 N,zsh, is nice - I like it
 N,ntfs-3g, helps me see things
 N,wget, powerful web utility
-N,xbindkeys, useful for non-english natives
-N,thunar, some habbits die hard
-O,ffmpegthumbnailer, dependecy of thunar
-O,tumbler, Dependecy of thunar 
+N,xbindkeys, useful for non-English natives
+N,thunar, some habits die hard
+O,ffmpegthumbnailer, dependency of thunar
+O,tumbler, Dependency of thunar 
 N,thunderbird, mutt is probably a better choice 
 N,transmission-gtk, I don't like the cli version
 N,arc-gtk-theme, simple but effective
@@ -53,11 +53,11 @@ O,ttf-carlito, optional
 N,vlc, no comment
 O,awesome-terminal-fonts,
 O,xdg-user-dirs, the traditional directories
-O,xorg-xprop, a useful tool for class namess 
+O,xorg-xprop, a useful tool for class names 
 A,discord, skype's younger and better brother
 A,capitaine-cursors, it looks nice
 A,cherrytree, notepad++ in wiki form
-A,ckb-next, rgb keyboard controll
+A,ckb-next, RGB keyboard control
 A,visual-studio-code-bin, vim but easy to use 
 A,spotify, useful for finding some songs
 A,steam-fonts, makes steam look better
