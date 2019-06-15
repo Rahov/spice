@@ -1,58 +1,30 @@
 #Tag,Name,Discription
-N,alsa-plugins,
-N,alsa-utils,
-N,audacious,
-N,awesome-terminal-fonts,
-N,compton,
-N,dash,
-N,dmenu,
-N,feh,
-N,ffmpegthumbnailer,
-N,firefox,
-O,gnome-disk-utility,
-A,google-chrome,
-N,highlight,
-N,hunspell-en_GB,
-N,i3-gaps,
-N,i3blocks,
-N,i3lock,
-N,i3status,
-N,intel-ucode,
-A,ksnip-git,
-N,lib32-nvidia-utils,
-N,libreoffice-fresh,
-N,libreoffice-fresh-en-gb,
-N,linux-firmware,
-N,linux-headers,
-N,linux-lts-headers,
-N,mesa,
-N,neofetch,
-N,networkmanager,
-O,noto-fonts-cjk,
-N,numlockx,
-N,papirus-icon-theme,
-N,playerctl,
-N,pulseaudio,
-N,pulseaudio-equalizer,
-N,qt5ct,
-N,redshift-gtk-git,
-N,reflector,
-N,rofi,
-O,ruby,
-A,spotify,
-N,steam,
-A,steam-fonts,
-O,tcl,
-O,tumbler,
-O,xdg-user-dirs,
-?,xf86-video-intel,
-N,xorg-server,
-,,
-,,
-,NATIVE,
-,,
+N,i3-gaps, the window manager
+N,audacious, rarely used - but it does the job
+N,compton, the more expensive compositor
+N,dash, the faster bash
+N,feh, useful for looking at my meme archive 
+N,firefox, no comment
+O,gnome-disk-utility, makes things easier
+N,highlight, I don't know how it works
+N,hunspell-en_GB, spellchecking dictionary
+N,libreoffice-fresh, will be removed for tex
+N,libreoffice-fresh-en-gb, same
+N,neofetch, cool tool
+N,networkmanager, does what the name says 
+N,numlockx, prevents me from breaking my arm 
+N,playerctl, useful music player protocol
+N,qt5ct, used for themeing issues
+N,redshift-gtk-git, eye sight is important
+N,reflector, useful tool for updating the mirrorlist
+N,rofi, dmenu but better looking
+N,steam, you think you funny
 N,atool, a bundle of rarerly used tools
 N,vim, the linux version of the swiss knife 
+O,ruby, optional vim dependecy
+O,lua, needed language support 
+O,tcl, optional vim dependecy
+O,perl, optionail vim dependecy
 N,alacritty, My current terminal emulator of choice
 O,alacritty-terminfo, Optional dependecy
 N,lightdm, the display manager
@@ -62,28 +34,29 @@ N,zathura, still getting used to it
 N,zathura-pdf-mupdf, used for reading pdfs
 N,zsh, is nice - I like it
 N,ntfs-3g, helps me see things
-N,arc-gtk-theme, simple but effective
 N,wget, powerful web utility
 N,xbindkeys, useful for non-english natives
 N,thunar, some habbits die hard
+O,ffmpegthumbnailer, dependecy of thunar
+O,tumbler, Dependecy of thunar 
 N,thunderbird, mutt is probably a better choice 
 N,transmission-gtk, I don't like the cli version
+N,arc-gtk-theme, simple but effective
+N,papirus-icon-theme,
+N,noto-fonts, no comment 
+O,noto-fonts-cjk, no comment
 N,ttf-fira-code, the terminal font
-,OPTIONAL,
-,,
-O,xorg-xprop, a useful tool for class namess 
-O,yay,
-O,vlc,
 O,ttf-carlito,
-?,xorg-fonts-alias,
-?,xorg-fonts-misc,
-,,
-,,
-,,
-,AUR,
-,,
+N,vlc,
+O,awesome-terminal-fonts,
+O,xdg-user-dirs,
+O,xorg-xprop, a useful tool for class namess 
 A,discord, skype's younger and better brother
 A,capitaine-cursors, it looks nice
 A,cherrytree, notepad++ in wiki form
 A,ckb-next, rgb keyboard controll
 A,visual-studio-code-bin, vim but easy to use 
+A,spotify,
+A,steam-fonts,
+A,google-chrome,
+A,ksnip-git,
