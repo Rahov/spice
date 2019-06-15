@@ -167,7 +167,7 @@ $ timedatectl set-ntp true
 $ hwclock --systohc --utc
 ```
 
-8. Adding modules (specific for your system)
+8. Adding modules (specific for the system)
 ```bash 
 vim /etc/mkinitcpio.conf
 
@@ -176,17 +176,15 @@ MODULES=(ext4 crc32c-intel nvidia nvidia_drm)
 
 # Adding binaries
 BINARIES=(fsck fsck.ext4)
-```
 
+
+#Regenerating an lts image:
+$ mkinitcpio -p linux-lts
+```
 *Note: tools for finding the needed modules include: 
 $ hwdetect --show-modules
 $ mkinitcpio -M
 Alternatively, refert to the Arch Linux Wiki for additional information.*
-
-Regenerating an lts image:
-```bash
-$ mkinitcpio -p linux-lts
-```
 
 9. Updating the mirrorlist
 
@@ -211,38 +209,26 @@ VerbosePkgLists
 
 11. Video graphics
 
-OpenGL:
 ```bash
+#OpenGL:
 $ pacman -S mesa mesa-libgl lib32-mesa-libgl 
-```
 
-Xorg:
-```bash
+#Xorg
 $ pacman -S xorg-server xorg-xinit xorg-server-utils
-```
 
-Intel:
-```bash
+#Intel:
 $ pacman -S xf86-video-intel lib32-mesa-libgl 
-```
 
-Nvidia:
-```bash
+#Nvidia:
 $ pacman -S nvidia lib32-nvidia-libgl nvidia-settings nvidia-utils lib32-nvidia-libgl
+# alternatively use nvidia-lts
 ```
 
 12. Desktop environment
 
 ```bash
 $ pacman -S i3 lightdm lightdm-gtk-greeter
-```
 
-13. Enable lightdm
-
-```bash
+#Enable lightdm
 $ systemctl enable lightdm 
 ```
-
-## Extras
-
-
