@@ -9,6 +9,12 @@ Compiled from multiple sources and personalized.
 ### Core Install 
 
 For UEFI motherboards, verify UEFI mode:
-'''bash
+```bash
 efivar -l
-'''
+```
+
+Connecting to the network (if not wired):
+```bash
+wifi-menu
+```
+
