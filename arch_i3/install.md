@@ -92,7 +92,7 @@ $ vim /boot/loader/entries/arch.conf
 
 title 	Arch Linux
 linux 	/vmlinuz-linux
-initrd  /intel-ucode.img
+initrd  /intel-ucode.img	#only if you've installed intel-ucode
 initrd	/initramfs-linux.img
 options root=/dev/'sda2' rw
 ```
@@ -143,6 +143,48 @@ vim /etc/sudoers
 
 # uncomment to allow members of group...
 %wheel ALL=(ALL) ALL
+```
+
+6. Generate Locales
+```bash 
+$ echo LANG=en_US.UTF-8 >> /etc/locale.conf
+$ echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
+$ locale-gen
+$ localectl set-locale LANG=en_US.UTF-8
+```
+
+7. Timezone and hardware clock
+```bash 
+$ tzselect
+$ timedatectl set-timezone 'Europe/London'
+$ timedatectl set-ntp true
+$ hwclock --systohc --utc
+```
+
+8. Adding modules (specific for your system)
+```bash 
+vim /etc/mkinitcpio.conf
+# Adding moduless
+MODULES=(ext4 crc32c-intel nvidia nvidia_drm)
+
+# Adding binaries
+BINARIES=(fsck fsck.ext4)
+```
+
+*Note: tools for finding the needed modules include: 
+$ hwdetect --show-modules
+$ mkinitcpio -M
+Alternatively, refert to the Arch Linux Wiki for additional information.*
+
+Regenerating a lts image:
+```bash
+$ mkinitcpio -p linux-lts
+```
+
+9. Updating the mirrorlist
+
+```bash
+$ reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 
