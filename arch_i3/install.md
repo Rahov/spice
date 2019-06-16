@@ -134,7 +134,7 @@ $ passwd
 
 2. Setup a hostname
 ```bash 
-$ host_name > /etc/hostname
+$ echo host_name > /etc/hostname
 ```
 
 4. Setup a user

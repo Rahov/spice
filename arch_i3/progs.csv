@@ -13,9 +13,7 @@ N,dash, the faster bash
 A,davinci-resolve, I don't know how to use it yet
 A,discord, skype's younger and better brother
 N,feh, useful for looking at my meme archive 
-O,ffmpegthumbnailer, dependency of thunar
 N,firefox, no comment
-O,gnome-disk-utility, makes things easier
 A,godot, awesome open-source game engine
 A,google-chrome, spyware
 N,highlight, I don't know how it works
@@ -30,8 +28,8 @@ N,lightdm-webkit-theme-litarvan, great theme
 O,lua, needed language support 
 N,neofetch, cool tool
 N,networkmanager, does what the name says 
-N,noto-fonts, no comment 
-O,noto-fonts-cjk, no comment
+N,noto-fonts, from the west
+O,noto-fonts-cjk, from the east
 N,ntfs-3g, helps me see things
 N,numlockx, prevents me from breaking my arm 
 N,papirus-icon-theme, the icon theme 
@@ -50,19 +48,19 @@ A,spotify, useful for finding some songs
 N,steam, you think you funny
 A,steam-fonts, makes steam look better
 O,tcl, optional vim dependency
-N,thunar, some habits die hard
 N,thunderbird, mutt is probably a better choice 
 N,transmission-gtk, I don't like the cli version
-O,ttf-carlito, optional
 N,ttf-fira-code, the terminal font
-O,tumbler, Dependency of thunar 
 N,vim, the Linux version of the Swiss knife 
 A,visual-studio-code-bin, vim but easy to use 
 N,vlc, no comment
 N,wget, powerful web utility
 N,xbindkeys, useful for non-English natives
-O,xdg-user-dirs, the traditional directories
 O,xorg-xprop, a useful tool for class names 
 N,zathura, still getting used to it
 N,zathura-pdf-mupdf, used for reading pdf
-N,zsh, is nice - I like it
+N,imagemagick, dependency for feh
+N,lxappearance, it helps with themeing
+N,gnome-keyring, a gnome with a ring of key
+O,calcurse,Calculator
+N,unclutter, removes the mouse

@@ -1,4 +1,4 @@
-## Useful Commands
+# Useful Commands
 
 ```bash
 # pacman 'n' stuff
@@ -34,7 +34,12 @@ $ vim /etc/makepkg.conf
 COMPRESSXZ=(xz -c -T 4 -z -)
 MAKEFLAGS="-j4"
 
+# Clear cache
+$ fc-cache -f -v
 ```
+
+# Enable Trim
+$ systemctl enable fstrim.timer
 
 ### Discord Keys 
 
