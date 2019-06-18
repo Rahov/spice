@@ -25,6 +25,9 @@ $ hwclock --debug        # corrects the system clock
 $ systemctl --failed
 $ journalctl -p 3 -xb
 
+# view what shell is linked
+$ ls -l /bin/sh
+
 # Change shell (to dash)
 $ ln -sfT dash /usr/bin/sh
 
