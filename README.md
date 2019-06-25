@@ -1,15 +1,9 @@
 # spice
 A helpful personalised guide for my Arch Linux
 
-
-## Preview
 ![desktop preview](preview.png)
 
-## Features
+## To-Do
 
-* dotfiles
-* Tips and Tricks 
-* installation guide
-* program list
-
-
+1. Notification system setup
+2. Quick refresh???

@@ -1,15 +1,21 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" => Genera
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
 filetype plugin on
-filetype indent on
+filetype indent off 
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" set tab size to be of 4 (spaces)
+set tabstop=3
+
+" Auto correct (I'm really bad at typing)
+set spelllang=en
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -89,10 +95,30 @@ set number relativenumber
 syntax enable
 
 " Temorary color scheme
-colorscheme pablo
+colorschem pablo
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+" wrap the whole word when a new line is about to be made
+set wrap linebreak nolist
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Status Line (stolen)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2
+set statusline=
+"set statusline +=%1*\ %n\ %*            "buffer number
+set statusline +=%5*%{&ff}%*            "file format
+set statusline +=%3*%y%*                "file type
+set statusline +=%4*\ %<%F%*            "full path
+set statusline +=%2*%m%*                "modified flag
+set statusline +=%1*%=%5l%*             "current line
+set statusline +=%2*/%L%*               "total lines
+set statusline +=%1*%4v\ %*             "virtual column number
+set statusline +=%2*0x%04B\ %*          "character under cursor
+
+"hi StatusLine ctermbg=0 cterm=NONE
