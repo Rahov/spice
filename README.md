@@ -5,5 +5,6 @@ A helpful personalised guide for my Arch Linux
 
 ## To-Do
 
-1. Notification system setup
-2. Quick refresh???
+1. Notification system setup - mail, torrent, 
+2. Arch network config
+3. Arch audio configuration 

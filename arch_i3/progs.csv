@@ -65,5 +65,7 @@ N,gnome-keyring, a gnome with a ring of key
 O,calcurse,Calculator
 N,unclutter, removes the mouse
 N,xdg-user-dirs, standard directories
-N,pavucontrol, GUI for controling and configuring audio settings
+N,pavucontrol, GUI for controlling and configuring audio settings
 N,gimp, useful for fixing images
+N,dunst, customizable notification daemon
+N,npt, time synch protocol (20 sec delay issues)

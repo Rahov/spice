@@ -1,6 +1,7 @@
 # Useful Commands
 
 ```bash
+
 # pacman 'n' stuff
 
 pacman -Ss             # List packages
@@ -9,6 +10,9 @@ pacman -Rns $(pacman -Qtdq)        # remove orphans
 pacman-mirrors --fasttrack && sudo pacman -Syyu # manjaro exclusive
 pacman -Qet # list explicetly packages
 pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h      # list & sort installed
+
+# syncronising mirror-list via reflector
+reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 
 # copy to a USB
@@ -39,17 +43,30 @@ MAKEFLAGS="-j4"
 
 # Clear cache
 fc-cache -f -v
+
 ```
 
 # Enable Trim
 
 ```bash
+
 systemctl enable fstrim.timer
+
+```
+
+# Looking for drivers
+```bash
+
+# Effective PCI print (example: networking)
+lspci -nnk | grep -iEA3 "(network|ethernet)"
+
 ```
 
 ### Discord Keys 
 
 ```bash
+
 gpg --recv-keys B6C8F98282B944E3B0D5C2530FC3042E345AD05D
 gpg --recv-keys 474E22316ABF4785A88C6E8EA2C794A986419D8A
+
 ```

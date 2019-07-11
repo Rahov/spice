@@ -162,10 +162,21 @@ $ localectl set-locale LANG=en_US.UTF-8
 
 7. Timezone and hardware clock
 ```bash 
+# timezone
 $ tzselect
 $ timedatectl set-timezone 'Europe/London'
 $ timedatectl set-ntp true
 $ hwclock --systohc --utc
+
+
+# if the ntp server lags again (20 sec issue) 
+# consider installing the ntp package and 
+# using the ntp daemon
+# instead:
+
+$ systemctl enable ntpd.service
+
+# details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
 ```
 
 8. Adding modules (specific for the system)
