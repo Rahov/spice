@@ -176,8 +176,10 @@ $ hwclock --systohc --utc
 
 $ systemctl enable ntpd.service
 
-# details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
 ```
+
+Details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
+
 
 8. Adding modules (specific for the system)
 ```bash 
