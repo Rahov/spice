@@ -61,7 +61,18 @@ systemctl enable fstrim.timer
 lspci -nnk | grep -iEA3 "(network|ethernet)"
 
 ```
+# internet
+```bash
+# figure out the name of the device
+ip link
 
+# Set that interface up
+ip link set wlp6s0 up
+
+# connect via iw
+sudo iw dev wlp6s0 scan | grep -iEA15 talktalk
+
+```
 ### Discord Keys 
 
 ```bash

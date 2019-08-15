@@ -19,8 +19,8 @@ window:
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 0
+    lines: 0
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -83,9 +83,9 @@ draw_bold_text_with_bright_colors: true
 # * file:///usr/share/doc/fontconfig/fontconfig-user.html
 font:
   size: 13.0
-  normal:
-    family: Fira Code 
-    style: Medium
+  normal: 
+    family: Fira Code
+    style: Medium 
   bold:
     family: Fira Code
   italic:
@@ -137,7 +137,7 @@ colors:
     cyan:    '0x56b6c2'
     white:   '0xabb2bf'
 
-  # Bright colors
+  # Bright colors (syntax)
   bright:
     black:   '0x5c6370'
     red:     '0xe06c75'

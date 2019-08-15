@@ -5,6 +5,7 @@ A helpful personalised guide for my Arch Linux
 
 ## To-Do
 
-1. Notification system setup - mail, torrent, 
-2. Arch network config
-3. Arch audio configuration 
+1. i3 Lock screen
+2. i3 start and close?
+2. Arch Bluetooth
+3. Arch Audio configuration 

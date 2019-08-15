@@ -1,4 +1,4 @@
-## Rahov's i3 config file (v4)
+# Rahov's i3 config file (v4)
 #
 # Table of Contents:
 #
@@ -18,66 +18,56 @@
 ## Window border size
 for_window [class="^.*"] border pixel 1
 
-## Floating windows 
-for_window [class="ksnip"] floating enable
-for_window [class="Transmission"] floating enable
-for_window [class="ckb-next"] floating enable
-
 ## Window gaps
-gaps inner 7
+smart_gaps on
+gaps inner 10
 gaps outer 5
+
+# Experimental
+hide_edge_borders both
+force_focus_wrapping on
 
 ## Default terminal
 set $term --no-startup-id $TERMINAL
 
 ## Font
-font pango:DejaVu Sans 12
+font pango:DejaVu Sans 12 
 
 ## Disable Mouse Features
 focus_follows_mouse no
 mouse_warping none
 
+## Floating windows 
+for_window [class="ksnip"] floating enable
+for_window [class="Transmission"] floating enable
+for_window [class="ckb-next"] floating enable
+
 ## Auto-start
-# Compton (transparency)
+# (simple) Programs 
 exec --no-startup-id compton -f
-
-# Thunderbird 
-assign [class="Thunderbird"] $ws6
-exec --no-startup-id thunderbird
-
-# Transmission
-assign [class="Transmission"] $ws7
-exec --no-startup-id transmission-gtk
-
-# Firefox
-assign [class="Firefox"] $ws2
-exec --no-startup-id firefox
-
-# Spotify (does not work)
-# assign [class="spotify"] $ws3
-# assign [class="Spotify"] $ws3
-# assign [class="Spotify\ Free"] $ws3
-# exec spotify
-
-# Steam-runtime 
-assign [class="Steam"] $ws4
-exec --no-startup-id steam
- 
-# ckb-next
-assign [class="ckb-next"] $ws7
-exec ckb-next
-
-# Wallpaper
-exec --no-startup-id feh --bg-scale /home/rahov/.wallpaper.png
-
-# Numlock
 exec --no-startup-id numlockx on
+exec --no-startup-id unclutter
+exec --no-startup-id feh --bg-scale /home/rahov/Pictures/slides/wallpaper.jpg
+exec --no-startup-id nm-applet
+exec --no-startup-id transmission-gtk
+exec --no-startup-id ckb-next
+#exec --no-startup-id thunderbird
+#exec --no-startup-id firefox
+#exec --no-startup-id steam
 
 ## keyboard setup (british / bulgarian-phonetic)
-exec --no-startup-id setxkbmap -model pc104 -layout ,bg -variant ,phonetic, -option grp:alt_shift_toggle
+exec_always --no-startup-id setxkbmap -model pc104 -layout gb,bg -variant ,phonetic, -option grp:alt_shift_toggle
 
-## Use Mouse+$mod to drag floating windows 
-floating_modifier $mod
+## start the notification system
+exec_always dunst -conf ~/.config/dunst/dunstrc1
+
+## Assing workspaces for specific programs
+assign [class="Thunderbird"] $ws6
+assign [class="Transmission"] $ws7
+assign [class="ckb-next"] $ws7
+assign [class="Firefox"] $ws2
+assign [class="Steam"] $ws4
+
 
 
 ###############################
@@ -86,13 +76,12 @@ floating_modifier $mod
 
 bar {
     position top
-    tray_output primary
+    tray_output none
     i3bar_command i3bar -t    
     status_command i3status --config ~/.config/i3status/config
     mode dock
     modifier None    
     binding_mode_indicator yes
-    font pango:DejaVu Sans 12
 
     colors{
           background #20202080
@@ -113,8 +102,8 @@ bar {
 ###########################
 
 # Audio controls
-bindsym XF86AudioRaiseVolume "exec amixer -q sset Master 3%+"
-bindsym XF86AudioLowerVolume "exec amixer -q sset Master 3%-"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%-"
 bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
 bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
@@ -124,12 +113,19 @@ bindsym XF86AudioStop exec "playerctl stop"
 ## windows keybind
 set $mod Mod4
 
+# Power Controls
+bindsym $mod+Shift+w exec "systemctl suspend"
+bindsym $mod+Shift+q exec "systemctl poweroff"
+
 ## redshift toggle
-bindsym $mod+i exec redshift -P -O 3500 
+bindsym $mod+i exec redshift -P -O 3000 
 bindsym $mod+Shift+i exec redshift -P -O 6500
 
 ## Snipping tool
 bindsym $mod+Shift+s exec ksnip
+
+## Use Mouse+$mod to drag floating windows 
+floating_modifier $mod
 
 ## resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -236,9 +232,9 @@ set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: "
 set $ws7 "7: "
-set $ws8 ""
-set $ws9 ""
-set $ws10 ""
+set $ws8 "8: "
+set $ws9 "9:"
+set $ws10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

@@ -17,13 +17,13 @@ order += "tztime local"
 
 ### CPU usage in %
 cpu_usage {
-  format = "  %usage "
+  format = "  %usage "
 }
 
 
 ### CPU temperature in °C
 cpu_temperature 0 {
-  format = "  %degrees °C "
+  format = "  %degrees °C "
 }
 
 
@@ -44,7 +44,7 @@ cpu_temperature 0 {
 
 ### Volume in %
 volume master {
-  format = "  %volume "
+  format = "  %volume "
   device = "default"
   mixer = "Master"
   mixer_idx = 0
