@@ -1,0 +1,11 @@
+e676c8cf538667c7b7492316723f6fe3
+::res://::1562691655
+CamBase.gd::GDScript::1562503133::0::1::<>Spatial<>::
+default_env.tres::Environment::1562687973::0::1::<><>::
+icon.png::StreamTexture::1553472445::1562500222::1::<><>::
+SelectionBox.gd::GDScript::1553472445::0::1::<>Control<>::
+TeamOneMat.tres::SpatialMaterial::1553472445::0::1::<><>::
+TeamTwoMat.tres::SpatialMaterial::1553472445::0::1::<><>::
+Unit.gd::GDScript::1553472445::0::1::<>KinematicBody<>::res://TeamOneMat.tres<>res://TeamTwoMat.tres
+Unit.tscn::PackedScene::1562503276::0::1::<><>::res://Unit.gd<>res://TeamTwoMat.tres
+World.tscn::PackedScene::1562687973::0::1::<><>::res://CamBase.gd<>res://SelectionBox.gd<>res://Unit.tscn

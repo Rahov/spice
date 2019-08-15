@@ -1,0 +1,5 @@
+res://assets/NPC_Template.tscn
+res://default_env.tres
+res://scenes/World.tscn
+res://scenes/World2.tscn
+res://scripts/NPC_v1.1.gd

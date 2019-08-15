@@ -1,0 +1,6 @@
+e676c8cf538667c7b7492316723f6fe3
+::res://::1562770941
+icon.png::StreamTexture::1562687390::1562691671::1::<><>::
+navmesh.gd::GDScript::1562751934::0::1::<>Navigation<>::
+navmesh.scn::PackedScene::1562770741::0::1::<><>::res://navmesh.gd<>res://particle.png
+particle.png::StreamTexture::1562687390::1562691671::1::<><>::

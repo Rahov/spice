@@ -1,0 +1,19 @@
+e676c8cf538667c7b7492316723f6fe3
+::res://::1561061128
+default_env.tres::Environment::1560718110::0::1::<><>::
+icon.png::StreamTexture::1560718110::1560718110::1::<><>::
+::res://Fonts/::1560718110
+Proxima Nova Alt Regular-webfont.ttf::DynamicFontData::1560718110::0::1::<><>::
+::res://Images/::1560718110
+proxy.duckduckgo.com.png::StreamTexture::1560718110::1560718110::1::<><>::
+::res://Scene/::1560718110
+NewGame.tscn::PackedScene::1560718110::0::1::<><>::res://Scripts/return.gd<>res://Fonts/Proxima Nova Alt Regular-webfont.ttf
+new_game_button.tscn::PackedScene::1560718110::0::1::<><>::res://Scripts/menu_button.gd<>res://Fonts/Proxima Nova Alt Regular-webfont.ttf
+Options.tscn::PackedScene::1560718110::0::1::<><>::res://Scripts/return.gd<>res://Fonts/Proxima Nova Alt Regular-webfont.ttf
+options_game_button.tscn::PackedScene::1560718110::0::1::<><>::res://Fonts/Proxima Nova Alt Regular-webfont.ttf
+quit_game_button.tscn::PackedScene::1560718110::0::1::<><>::res://Fonts/Proxima Nova Alt Regular-webfont.ttf
+title_screen.tscn::PackedScene::1560718110::0::1::<><>::res://Scripts/title_screen.gd<>res://Images/proxy.duckduckgo.com.png<>res://Scene/new_game_button.tscn<>res://Scene/options_game_button.tscn<>res://Scene/quit_game_button.tscn
+::res://Scripts/::1560718110
+menu_button.gd::GDScript::1560718110::0::1::<>Button<>::
+return.gd::GDScript::1560718110::0::1::<>Control<>::
+title_screen.gd::GDScript::1560718110::0::1::<>Control<>::

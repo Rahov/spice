@@ -1,0 +1,12 @@
+e676c8cf538667c7b7492316723f6fe3
+::res://::1563725390
+ball.gd::GDScript::1563720360::0::1::<>Area2D<>::
+ball.png::StreamTexture::1563720360::1563724007::1::<><>::
+ceiling_floor.gd::GDScript::1563720360::0::1::<>Area2D<>::
+icon.png::StreamTexture::1563720360::1563724007::1::<><>::
+left_pallete.png::StreamTexture::1563720360::1563724007::1::<><>::
+paddle.gd::GDScript::1563725378::0::1::<>Area2D<>::
+pong.tscn::PackedScene::1563725381::0::1::<><>::res://paddle.gd<>res://left_pallete.png<>res://right_pallete.png<>res://ball.gd<>res://ball.png<>res://separator.png<>res://wall.gd<>res://ceiling_floor.gd
+right_pallete.png::StreamTexture::1563720360::1563724007::1::<><>::
+separator.png::StreamTexture::1563720360::1563724007::1::<><>::
+wall.gd::GDScript::1563720360::0::1::<>Area2D<>::
