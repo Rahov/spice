@@ -203,7 +203,7 @@ Alternatively, refert to the Arch Linux Wiki for additional information.*
 9. Updating the mirrorlist
 
 ```bash
-$ reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+$ reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 10. Configuring pacman
