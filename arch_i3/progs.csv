@@ -70,3 +70,4 @@ N,blender, shapes 'n' stuff
 N,dunst, customizable notification daemon
 N,npt, time synch protocol (20 sec delay issues)
 N,network-manager-applet, GUI for wifi networks
+A,Plymouth, Boot Splash icon
