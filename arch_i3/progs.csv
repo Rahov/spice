@@ -37,6 +37,7 @@ O,perl, optionail vim dependency
 N,playerctl, useful music player protocol
 N,pulseaudio, makes audio work
 N,pulseaudio-alsa, connects audio to alsa
+N,pulseaudio-bluetooth, connects audio to bluez
 N,pulsemixer, controls audio
 N,alsa-utils,
 N,qt5ct, used for themeing issues
