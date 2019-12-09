@@ -76,3 +76,5 @@ N,bc, terminal-calculator
 A,dashbinsh, from bashing to dashing
 N,mediainfo, its in the name
 N,youtube-dl, cause the converters online are trash
+N,xarchiver, thunar dependency
+N,gvfs, virtual file system (thunar dependency 2)
