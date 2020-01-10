@@ -69,7 +69,7 @@ N,pavucontrol, GUI for controlling and configuring audio settings
 N,gimp, useful for fixing images
 N,blender, shapes 'n' stuff
 N,dunst, customizable notification daemon
-N,npt, time synch protocol (20 sec delay issues)
+N,ntp, time synch protocol (20 sec delay issues)
 N,network-manager-applet, GUI for wifi networks
 A,Plymouth, Boot Splash icon
 N,bc, terminal-calculator
