@@ -58,8 +58,7 @@ N,vlc, no comment
 N,wget, powerful web utility
 N,xbindkeys, useful for non-English natives
 O,xorg-xprop, a useful tool for class names 
-N,zathura, still getting used to it
-N,zathura-pdf-mupdf, used for reading pdf
+N,evince, PDFs everywhere...
 N,imagemagick, dependency for feh
 N,lxappearance, it helps with themeing
 N,gnome-keyring, a gnome with a ring of keys
