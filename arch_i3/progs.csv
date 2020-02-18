@@ -33,7 +33,8 @@ O,noto-fonts-cjk, from the east
 N,ntfs-3g, helps me see things
 N,numlockx, prevents me from breaking my arm 
 N,papirus-icon-theme, the icon theme 
-O,perl, optionail vim dependency
+N,perl, optionail vim dependency
+N,perl-finance-quote, stonks
 N,playerctl, useful music player protocol
 N,pulseaudio, makes audio work
 N,pulseaudio-alsa, connects audio to alsa
