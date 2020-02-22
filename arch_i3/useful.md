@@ -44,6 +44,9 @@ hwclock --debug        # corrects the system clock
 systemctl --failed
 journalctl -p 3 -xb
 
+# Disable screen saver
+xset s off
+
 # view what shell is linked
 ls -l /bin/sh
 
