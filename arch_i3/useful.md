@@ -46,6 +46,7 @@ journalctl -p 3 -xb
 
 # Disable screen saver
 xset s off
+xset -dpms
 
 # view what shell is linked
 ls -l /bin/sh
