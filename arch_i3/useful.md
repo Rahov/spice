@@ -3,14 +3,14 @@
 
 ### Pacman
 ```bash
-# Tools
+# Pac-tools
 
-pacman -Ss             # List packages
+pacman -Ss        # List packages
 pacman -Scc       # Clear cache
 pacman -Rns $(pacman -Qtdq)        # remove orphans
-pacman-mirrors --fasttrack && sudo pacman -Syyu # manjaro exclusive
 pacman -Qet # list explicetly packages
 pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h      # list & sort installed
+pacman -Sy archlinux-keyring && sudo pacman -Syu # update procedure after prolonged absence
 
 # Mirror Lists
 reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
