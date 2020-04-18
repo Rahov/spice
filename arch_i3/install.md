@@ -188,7 +188,7 @@ Details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protoc
 vim /etc/mkinitcpio.conf
 
 # Adding moduless
-MODULES=(ext4 crc32c-intel nvidia nvidia_drm)
+MODULES=(ext4 crc32c-intel nvidia nvidia_drm nvidia_modeset nvidia_uvm)
 
 # Adding binaries
 BINARIES=(fsck fsck.ext4)
