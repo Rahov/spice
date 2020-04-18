@@ -230,13 +230,13 @@ VerbosePkgLists
 $ pacman -S mesa mesa-libgl lib32-mesa-libgl 
 
 #Xorg
-$ pacman -S xorg-server xorg-xinit xorg-server-utils
+$ pacman -S xorg-server xorg-xinit
 
 #Intel:
-$ pacman -S xf86-video-intel lib32-mesa-libgl 
+$ pacman -S xf86-video-intel
 
 #Nvidia:
-$ pacman -S nvidia lib32-nvidia-libgl nvidia-settings nvidia-utils lib32-nvidia-libgl
+$ pacman -S nvidia lib32-nvidia-libgl nvidia-settings nvidia-utils
 # alternatively use nvidia-lts
 ```
 
