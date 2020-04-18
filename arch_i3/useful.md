@@ -27,7 +27,7 @@ Target=nvidia
 [Action]
 Depends=mkinitcpio
 When=PostTransaction
-Exec=/usr/bin/mkinitcpio -P
+Exec=/usr/bin/mkinitcpio -P linux
 ```
 
 
