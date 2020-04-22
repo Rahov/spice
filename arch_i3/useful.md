@@ -14,20 +14,26 @@ pacman -Sy archlinux-keyring && sudo pacman -Syu # update procedure after prolon
 
 # Mirror Lists
 reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
-
-# Pacman Hooks
-# /etc/pacman.d/hooks/nvidia.hook
+```
+## Nvidia hook
+```
+/etc/pacman.d/hooks/nvidia.hook
+-------------------------------
 [Trigger]
 Operation=Install
 Operation=Upgrade
 Operation=Remove
 Type=Package
 Target=nvidia
+Target=linux
+# Change the linux part above and in the Exec line if a different kernel is used
 
 [Action]
+Description=Update Nvidia module in initcpio
 Depends=mkinitcpio
 When=PostTransaction
-Exec=/usr/bin/mkinitcpio -P linux
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
 ```
 
 
