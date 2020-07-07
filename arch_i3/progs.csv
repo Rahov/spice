@@ -83,3 +83,4 @@ N,xarchiver, thunar dependency
 N,gvfs, virtual file system (thunar dependency 2)
 N,cpupower, power to the cpu (utility)
 N,xrandr, monitor-tests
+N, ffmpegthumbnailer, video thumbnails
