@@ -17,7 +17,7 @@ reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 ## Nvidia hook
 ```
-vim /etc/pacman.d/hooks/nvidia.hook
+$ vim /etc/pacman.d/hooks/nvidia.hook
 
 [Trigger]
 Operation=Install
@@ -61,7 +61,7 @@ ls -l /bin/sh
 ln -sfT dash /usr/bin/sh
 
 # Optimization
-vim /etc/makepkg.conf
+$ vim /etc/makepkg.conf
 
 COMPRESSXZ=(xz -c -T 4 -z -)
 MAKEFLAGS="-j4"
@@ -91,7 +91,7 @@ lspci -nnk | grep -iEA3 "(network|ethernet)"
 
 ### Thumbnailer webp
 ```bash
-vim /usr/share/thumbnailers/webp.thumbnailer
+$ vim /usr/share/thumbnailers/webp.thumbnailer
 
 [Thumbnailer Entry]
 Version=1.0
