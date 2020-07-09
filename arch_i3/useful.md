@@ -17,8 +17,8 @@ reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 ## Nvidia hook
 ```
-/etc/pacman.d/hooks/nvidia.hook
--------------------------------
+vim /etc/pacman.d/hooks/nvidia.hook
+
 [Trigger]
 Operation=Install
 Operation=Upgrade
@@ -61,7 +61,7 @@ ls -l /bin/sh
 ln -sfT dash /usr/bin/sh
 
 # Optimization
-# /etc/makepkg.conf
+vim /etc/makepkg.conf
 
 COMPRESSXZ=(xz -c -T 4 -z -)
 MAKEFLAGS="-j4"
@@ -87,4 +87,17 @@ sudo iw dev wlp6s0 scan | grep -iEA15 talktalk
 
 # Effective PCI print (example: networking)
 lspci -nnk | grep -iEA3 "(network|ethernet)"
+```
+
+### Thumbnailer webp
+```bash
+vim /usr/share/thumbnailers/webp.thumbnailer
+
+[Thumbnailer Entry]
+Version=1.0
+Encoding=UTF-8
+Type=X-Thumbnailer
+Name=webp Thumbnailer
+MimeType=image/webp;
+Exec=/usr/bin/convert -thumbnail %s %i %o
 ```
