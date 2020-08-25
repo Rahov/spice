@@ -101,3 +101,9 @@ Name=webp Thumbnailer
 MimeType=image/webp;
 Exec=/usr/bin/convert -thumbnail %s %i %o
 ```
+### Thunar 'Open with vim' problem
+```
+$ vim /usr/share/applications/vim.desktop
+TryExec=vim
+Exec=alacritty -e "vim" %F # alacritty or any other terminal of choice
+Terminal=false
