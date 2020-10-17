@@ -1,4 +1,4 @@
-# Useful Commands
+# Useful
 
 
 ### Pacman
