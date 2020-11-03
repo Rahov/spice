@@ -60,7 +60,7 @@ $ mount /dev/sda1 /mnt/boot
 1. Installing the system 
 
 ```bash
-$ pacstrap /mnt base base-devel linux-headers linux-lts linux-lts-headers zsh git dialog wpa_supplicant iw vim 
+$ pacstrap /mnt base base-devel linux-lts linux-lts-headers zsh git dialog wpa_supplicant iw vim linux-firmware e2fsprogs exfatprogs ntfs-3g
 ```
 
 *Note: Only base is needed for the system, however, base-devel is strongly recommended. Other applciations within the wrapper are optional and can be removed.*
