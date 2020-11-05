@@ -1,6 +1,6 @@
 # Arch Linux installation guide
 
-Please refer to the Arch Linux wiki for additional details on the process.
+Please refer to the [Arch Linux](https://wiki.archlinux.org) wiki for additional details on the process.
 
 ## Pre-installation  
 
@@ -159,9 +159,6 @@ $ timedatectl set-timezone 'Europe/London'
 $ timedatectl set-ntp true
 $ hwclock --systohc --utc
 ```
-
-Details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
-
 
 8. Adding modules (specific for the system)
 ```bash 
