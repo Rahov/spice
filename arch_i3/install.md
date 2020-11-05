@@ -1,17 +1,6 @@
 # Arch Linux installation guide
 
-Compiled from multiple sources and personalized.
-
-If there is any misunderstanding or mistakes within the guide, please do let me know. Alternatively, refer to the soruces below:
-
-* Source 1: Arch Linux Wiki 
-* Source 2: plasma guide 
-* Source 3: medium guide
-* Source 4:  
-
-#### Preview
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "placeholder")
+Please refer to the Arch Linux wiki for additional details on the process.
 
 ## Pre-installation  
 
@@ -46,14 +35,14 @@ $ cfdisk /dev/xdaX	#for ssd drives
 3. File systems
 
 ```bash
-$ mkfs.fat -F32 /dev/sda1
-$ mkfs.ext4 /dev/sda2
-$ mount /dev/sda2 /mnt
+$ mkfs.fat -F32 /dev/nvme0n1p1
+$ mkfs.ext4 /dev/nvme0n1p2
+$ mount /dev/nvme0n1p2 /mnt
 $ mkdir /mnt/boot
-$ mount /dev/sda1 /mnt/boot
+$ mount /dev/nvme0n1p1 /mnt/boot
 ```
 
-*Note: I'm assuming sda1 is the EFI system partition and sda2 is the root partition. Addtioanlly, swap is not included.*
+*Note: I'm assuming nvme0n1p1 is the EFI system partition and nvme0n1p2 is the root partition. Addtioanlly, swap is not included.*
 
 ## Installation
 
@@ -169,15 +158,6 @@ $ tzselect
 $ timedatectl set-timezone 'Europe/London'
 $ timedatectl set-ntp true
 $ hwclock --systohc --utc
-
-
-# if the ntp server lags again (20 sec issue) 
-# consider installing the ntp package and 
-# using the ntp daemon
-# instead:
-
-$ systemctl enable ntpd.service
-
 ```
 
 Details at: [arch wiki](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
@@ -231,9 +211,6 @@ $ pacman -S mesa mesa-libgl lib32-mesa-libgl
 
 #Xorg
 $ pacman -S xorg-server xorg-xinit
-
-#Intel:
-$ pacman -S xf86-video-intel
 
 #Nvidia:
 $ pacman -S nvidia lib32-nvidia-libgl nvidia-settings nvidia-utils
