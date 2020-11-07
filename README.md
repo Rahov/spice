@@ -8,4 +8,5 @@ Includes:
 3. .configs
 4. etc.
 
+## Preview:
 ![desktop preview](preview.png)
