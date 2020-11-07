@@ -29,6 +29,7 @@ force_focus_wrapping on
 
 ## Default terminal
 set $term --no-startup-id $TERMINAL
+# $TERMINAL bugs out sometimes
 
 ## Font
 font pango:DejaVu Sans 12 
@@ -41,16 +42,22 @@ mouse_warping none
 for_window [class="ksnip"] floating enable
 for_window [class="Transmission"] floating enable
 for_window [class="ckb-next"] floating enable
+for_window [class="Alacritty" instance="calc"] floating enable
+for_window [class="Alacritty" instance="calc"] resize set 800 400
+
 
 ## Auto-start
 # (simple) Programs 
-exec --no-startup-id compton -f
+exec_always --no-startup-id pkill; compton -c -b #--config ~/.config/picom/picom.conf 
 exec --no-startup-id numlockx on
 exec --no-startup-id unclutter
-exec --no-startup-id feh --bg-scale /home/rahov/Pictures/slides/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/.wpp.jpg
 exec --no-startup-id nm-applet
-exec --no-startup-id transmission-gtk
-exec --no-startup-id ckb-next
+exec xset s off
+exec xset -dpms
+
+#exec --no-startup-id transmission-gtk
+#exec --no-startup-id ckb-next
 #exec --no-startup-id thunderbird
 #exec --no-startup-id firefox
 #exec --no-startup-id steam
@@ -62,12 +69,14 @@ exec_always --no-startup-id setxkbmap -model pc104 -layout gb,bg -variant ,phone
 exec_always dunst -conf ~/.config/dunst/dunstrc1
 
 ## Assing workspaces for specific programs
+assign [class="Firefox"] $ws2
+assign [class="firefox"] $ws2
+#assign [class="Spotify"] $ws2
+assign [class="Steam"] $ws4
+assign [class="discord"] $ws5
 assign [class="Thunderbird"] $ws6
 assign [class="Transmission"] $ws7
 assign [class="ckb-next"] $ws7
-assign [class="Firefox"] $ws2
-assign [class="Steam"] $ws4
-
 
 
 ###############################
@@ -101,6 +110,9 @@ bar {
 ###     Keybinds        ###
 ###########################
 
+## windows keybind
+set $mod Mod4
+
 # Audio controls
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%-"
@@ -110,12 +122,6 @@ bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioStop exec "playerctl stop"
 
-## windows keybind
-set $mod Mod4
-
-# Power Controls
-bindsym $mod+Shift+w exec "systemctl suspend"
-bindsym $mod+Shift+q exec "systemctl poweroff"
 
 ## redshift toggle
 bindsym $mod+i exec redshift -P -O 3000 
@@ -123,6 +129,9 @@ bindsym $mod+Shift+i exec redshift -P -O 6500
 
 ## Snipping tool
 bindsym $mod+Shift+s exec ksnip
+
+## Calculator
+bindsym $mod+u exec $term --class "calc" -e bc -q -l
 
 ## Use Mouse+$mod to drag floating windows 
 floating_modifier $mod
@@ -154,7 +163,7 @@ mode "resize" {
 }
 
 ## start a terminal
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec $term
 
 ## kill focused window
 bindsym $mod+q kill
@@ -166,10 +175,10 @@ bindsym $mod+v split toggle
 bindsym $mod+d exec rofi -show drun
 
 ## change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -178,10 +187,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -217,8 +226,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-
+# put computer to sleep
+bindsym $mod+Shift+w exec systemctl suspend
+# shutdown computer
+bindsym $mod+Shift+q exec systemctl poweroff
 
 ###########################
 ###     Workspace       ###

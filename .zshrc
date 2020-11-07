@@ -1,8 +1,17 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rahov/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+PATH="/home/rahov/.config/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/rahov/.config/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/rahov/.config/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/rahov/.config/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/rahov/.config/perl5"; export PERL_MM_OPT;
+
+# export PATH="/opt/anaconda3/bin:$PATH"  # commented out by conda initialize
+export TERM=alacritty
+#export PATH="/usr/lib/python3.8/site-packages/sphinx/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -82,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
+#   V
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
@@ -98,3 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias update="sudo pacman -Syu ; paru -Sua"
+alias server="sudo reflector --verbose --latest 20 --sort rate --save /etc/pacman.d/mirrorlist"
+#alias fixmkv='f() {ffmpeg -i $1 -vcodec dnxhd -profile:v 1 -acodec pcm_s16le -s 1920x1080 -r 30000/1001 -b:v 36M -pix_fmt yuv422p -f mov $1.mov};f'
+alias fixmkv='f() {ffmpeg -i $1 -threads 1 -vcodec dnxhd -profile:v 1 -an -s 1920x1080 -r 30000/1001 -b:v 36M -pix_fmt yuv422p -f mov output.mov};f'
+
+alias youtube-ul='f() {ffmpeg -i $1 -vf yadif -codec:v libx264 -crf 1 -bf 2 -flags +cgop -pix_fmt yuv420p -codec:a aac -strict -2 -b:a 384k -r:a 48000 -movflags faststart youtube.mp4};f'
+alias getaudio='f() {ffmpeg -i $1 -map 0:1 -acodec pcm_s24le audio.wav -map 0:2 -acodec pcm_s24le audio.wav};f'

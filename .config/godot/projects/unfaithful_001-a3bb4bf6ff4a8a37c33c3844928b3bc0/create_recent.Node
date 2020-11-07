@@ -1,8 +1,0 @@
-StaticBody
-CollisionShape
-MeshInstance
-RigidBody
-ColorRect
-Camera
-VehicleWheel
-CanvasLayer

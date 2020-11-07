@@ -1,8 +1,0 @@
-res://build/environment/environment.tres
-res://build/fonts/menu_font_config.tres
-res://build/scenes/UI_buildings.tscn
-res://build/scenes/UI_issues.tscn
-res://build/scenes/UI_people.tscn
-res://build/scenes/main_menu.tscn
-res://build/scenes/map.tscn
-res://experimental/nav.tscn
