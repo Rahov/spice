@@ -107,3 +107,9 @@ $ vim /usr/share/applications/vim.desktop
 TryExec=vim
 Exec=alacritty -e "vim" %F # alacritty or any other terminal of choice
 Terminal=false
+```
+### faillock.conf
+$ vim /etc/security/faillock.conf
+# the default is 3
+deny = 0
+```
