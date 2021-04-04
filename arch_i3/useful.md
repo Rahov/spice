@@ -102,7 +102,7 @@ MimeType=image/webp;
 Exec=/usr/bin/convert -thumbnail %s %i %o
 ```
 ### Thunar 'Open with vim' problem
-```
+```bash
 $ vim /usr/share/applications/vim.desktop
 TryExec=vim
 Exec=alacritty -e "vim" %F # alacritty or any other terminal of choice
