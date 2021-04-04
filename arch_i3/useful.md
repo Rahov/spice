@@ -113,6 +113,5 @@ Terminal=false
 ### faillock.conf
 ```
 $ vim /etc/security/faillock.conf
-# the default is 3
-deny = 0
+deny = 0 # the default is 3
 ```
