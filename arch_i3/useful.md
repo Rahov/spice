@@ -115,3 +115,10 @@ Terminal=false
 $ vim /etc/security/faillock.conf
 deny = 0 # the default is 3
 ```
+
+### pipewire
+```
+$ systemctl --user enable --now pipewire.socket
+$ systemctl --user enable --now pipewire.service
+$ systemctl --user enable --now pipewire-media-session.socket
+```
