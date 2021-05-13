@@ -1,21 +1,13 @@
 Tag,Name,Description
 N,alacritty, My current terminal emulator of choice
-O,alacritty-terminfo, Optional dependency
 N,arc-gtk-theme, simple but effective
 N,atool, a bundle of rarely used tools
-N,audacious, rarely used - but it does the job
 O,awesome-terminal-fonts,I don’t even know 
 A,capitaine-cursors, it looks nice
-A,cherrytree, notepad++ in wiki form
-A,ckb-next, RGB keyboard control
 N,picom, the more expensive compositor
 N,dash, the faster bash
-A,davinci-resolve, I don't know how to use it yet
 A,discord, skype's younger and better brother
 N,feh, useful for looking at my meme archive 
-N,firefox, no comment
-A,godot, awesome open-source game engine
-A,google-chrome, spyware
 N,highlight, I don't know how it works
 N,hunspell-en_GB, spellchecking dictionary
 N,i3-gaps, the window manager
@@ -25,25 +17,16 @@ N,libreoffice-fresh-en-gb, same
 N,lightdm, the display manager
 N,lightdm-gtk-greeter, used for waving hands
 N,lightdm-webkit-theme-litarvan, great theme
-O,lua, needed language support 
-N,neofetch, cool tool
 N,networkmanager, does what the name says 
 N,noto-fonts, from the west
 O,noto-fonts-cjk, from the east
 N,ntfs-3g, helps me see things
 N,numlockx, prevents me from breaking my arm 
 N,papirus-icon-theme, the icon theme 
-N,perl, optionail vim dependency
-N,perl-finance-quote, stonks
-N,perl-mozilla-ca, stonks dependecy
 N,gnucash, monehhhh
-N,playerctl, useful music player protocol
-N,pulseaudio, makes audio work
-N,pulseaudio-alsa, connects audio to alsa
-N,pulseaudio-bluetooth, connects audio to bluez
-N,bluez-utils, ctl for bluetooth
-N,pulsemixer, controls audio
 N,alsa-utils,
+N,playerctl, useful music player protocol
+N,bluez-utils, ctl for bluetooth
 N,qt5ct, used for themeing issues
 N,redshift-gtk-git, eye sight is important
 N,reflector, useful tool for updating the mirrorlist
@@ -52,16 +35,12 @@ O,ruby, optional vim dependency
 A,spotify, useful for finding some songs
 N,steam, you think you funny
 A,steam-fonts, makes steam look better
-O,tcl, optional vim dependency
-N,thunderbird, mutt is probably a better choice 
 N,transmission-gtk, I don't like the cli version
 N,ttf-fira-code, the terminal font
 N,vim, the Linux version of the Swiss knife 
-A,visual-studio-code-bin, vim but easy to use 
 N,vlc, no comment
-N,wget, powerful web utility
 N,xbindkeys, useful for non-English natives
-O,xorg-xprop, a useful tool for class names 
+O,xorg-xprop, a useful tool for class names (utility)
 N,evince, PDFs everywhere...
 N,imagemagick, dependency for feh
 N,lxappearance, it helps with themeing
@@ -69,12 +48,9 @@ N,gnome-keyring, a gnome with a ring of keys
 N,unclutter, removes the mouse
 N,xdg-user-dirs, standard directories
 N,pavucontrol, GUI for controlling and configuring audio settings
-N,gimp, useful for fixing images
-N,blender, shapes 'n' stuff
+N,pipewire, pipe-ing some wires in
 N,dunst, customizable notification daemon
-N,ntp, time synch protocol (20 sec delay issues)
 N,network-manager-applet, GUI for wifi networks
-A,Plymouth, Boot Splash icon
 N,bc, terminal-calculator
 A,dashbinsh, from bashing to dashing
 N,mediainfo, its in the name
@@ -82,5 +58,4 @@ N,youtube-dl, cause the converters online are trash
 N,xarchiver, thunar dependency
 N,gvfs, virtual file system (thunar dependency 2)
 N,cpupower, power to the cpu (utility)
-N,xrandr, monitor-tests
 N, ffmpegthumbnailer, video thumbnails
