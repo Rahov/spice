@@ -83,7 +83,7 @@ title 	Arch Linux
 linux 	/vmlinuz-linux
 initrd  /intel-ucode.img	#only if you've installed intel-ucode
 initrd	/initramfs-linux.img quiet splash
-options root=/dev/'sda2' rw quiet splash nvidia-drm.modset=1
+options root=/dev/sda2 rw quiet splash nvidia-drm.modset=1
 ```
 
 *Note: linux-lts can be used as a boot entry instead* 
