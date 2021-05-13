@@ -23,9 +23,9 @@ $ vim /etc/pacman.d/hooks/nvidia.hook
 Operation=Install
 Operation=Upgrade
 Operation=Remove
-Type=Package
-Target=nvidia
-Target=linux
+Type=Package 
+Target=nvidia # or nvidia-lts
+Target=linux # or linux-lts
 # Change the linux part above and in the Exec line if a different kernel is used
 
 [Action]
