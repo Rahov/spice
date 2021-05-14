@@ -122,3 +122,10 @@ $ systemctl --user enable --now pipewire.socket
 $ systemctl --user enable --now pipewire.service
 $ systemctl --user enable --now pipewire-media-session.socket
 ```
+
+### Bluetooth
+```
+$ vim /etc/bluetooth/main.conf
+[Policy]
+AutoEnable=true
+```
